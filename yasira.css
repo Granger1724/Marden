@@ -1,0 +1,244 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: #b22222;
+    animation: fadeIn 2s ease-in-out;
+    text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 1rem;
+    }
+    
+    .texto {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .img {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formulario {
+        width: 90%;
+    }
+
+    #musicButton {
+ font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    .texto {
+        width: 85%;
+    }
+}
+
+/* Imágenes Responsivas */
+.img img {
+    border: 3px solid;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 100%; /* Asegura que la imagen no exceda el contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+.texto{
+    
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+    color: #444;
+}
+body{
+    font-family: 'Roboto', sans-serif ;
+    background: linear-gradient(to right, #ffecd2,#fcb69f);
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: #b22222;
+    animation: fadeIn 2s ease-in-out;
+}
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    animation: glow 1.5s infinite alternate;
+}
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #ff1493, 0 0 10px #ff1493, 0 0 20px #ff1493;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff69b4, 0 0 30px #ff69b4, 0 0 40px #ff69b4;
+    }
+}
+
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+h2{
+    font-family: 'Roboto' sans-serif;
+    font-size: 1.2rem;
+    color: #444;
+}
+.img {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Cambié justify-items a justify-content */
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-left: 0.3%;
+    border-radius: 10px;
+    max-width: 100%; /* Asegura que el contenedor no exceda el ancho de la pantalla */
+}
+
+.img img {
+    border: 3px solid;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    max-height: 300px;
+   
+}
+
+.img img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño ligeramente al pasar el cursor */
+}
+
+/* Estilo específico para la primera imagen */
+.img .rotated {
+    transform: rotate(-90deg); /* Rota la imagen menos 90 grados */
+}
+.img .rotated:hover {
+    transform: rotate(-90deg) scale(1.1); /* Mantiene la rotación y aumenta el tamaño al pasar el cursor */
+}
+
+
+.boton{
+    margin-bottom: 2%;
+}
+
+.formulario {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.formulario h3 {
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.formulario input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.formulario input:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 182, 193, 0.8);
+}
+
+.formulario button {
+    background-color: #ff6f91;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario button:hover {
+    background-color: #ff477e;
+}
+
+#mensajeEspecial {
+    margin-top: 20px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.final{
+    text-align: center;
+    margin-top: 2%;
+    justify-content: center;
+}
+
+#contador{
+    text-align: end;
+}
+
+#musicButton {
+    background-color: #ff6f91; /* Color principal */
+    color: white; /* Texto blanco */
+    border: none; /* Sin bordes */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 25px; /* Bordes redondeados */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    font-weight: bold; /* Fuente más gruesa */
+    cursor: pointer; /* Cambia el puntero al pasar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+    transition: transform 0.2s, box-shadow 0.2s; /* Animaciones */
+}
+
+#musicButton:hover {
+    transform: scale(1.1); /* Aumenta ligeramente de tamaño al pasar el mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+    background-color: #ff506d; /* Color más oscuro al pasar */
+}
+
+#musicButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100; /* Para que esté por encima de otros elementos */
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yasira</title>
+    <link rel="stylesheet" href="yasira.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div class="music-container">
+        <button id="musicButton" onclick="playMusic()">🎵 Escuchar música</button>
+    </div>
+    
+
+    <script>
+    function playMusic() {
+        const audio = new Audio('Duvet-Boa.mp3'); // Reemplaza con la ruta de tu archivo de audio
+        audio.play();
+    }
+</script>
+    <div>
+    <h1>Yasira </h1>
+    
+    </div>
+    <div class="texto">
+        <h2>Desde el momento en que te ví quede encantado con la belleza de tus ojos, 
+        tu cabello,tus rasgos,tu destreza fisica y tu <br>
+        inigualable mentalidad me dejaron cautivado.</h2>
+    <h2>¿Qué puedo decir de mi corazón desde que te conocí?<br>
+        Es como un encanto mágico ¿Qué puedo decir?
+    </h2>
+    <h2>Mi corazón es solo un viajero y tú el oasis que busca</h2>
+    <h2>¿Qué más puede desear mi corazón? si tu estas conmigo</h2>
+    <h2>Está página es para que recuerdes lo única y especial que eres para mí.</h2>
+    </div>
+    <br>
+    <br>
+    <div class="img">
+        <img src="yasira.jpeg" alt="" width="300px" height="300px" class="img1 rotated">
+        <img src="yasira2.jpeg" alt="" width="300px" height="300px">
+        <img src="yasira3.jpeg" alt="" width="300px" height="300px">
+        <img src="yasira4.jpeg" alt="" width="300px" height="300px">
+    </div>
+
+
+<form onsubmit="mostrarMensaje(event)" class="formulario">
+    <h3>Deja un mensaje para ti misma:</h3>
+    <input type="text" id="mensaje" placeholder="Escribe algo lindo aquí..." required>
+    <button type="submit">Enviar</button>
+</form>
+<div id="mensajeEspecial"></div>
+
+<div class="final">Siempre serás especial para mí. ❤️</div>
+<script>
+    const final = document.querySelector('.final');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY + window.innerHeight >= document.body.offsetHeight) {
+            final.style.opacity = 1;
+            final.style.transform = 'translateY(0)';
+        }
+    });
+</script>
+
+<script>
+    function mostrarMensaje(event) {
+        event.preventDefault();
+        const mensaje = document.getElementById('mensaje').value;
+        const mensajeEspecial = document.getElementById('mensajeEspecial');
+        mensajeEspecial.innerText = `¡Gracias por tu mensaje, Yasira! Siempre recordaré esto: "${mensaje}"`;
+        mensajeEspecial.style.opacity = 0;
+        mensajeEspecial.style.transition = 'opacity 1.5s ease, transform 1.5s ease';
+        mensajeEspecial.style.transform = 'scale(0.8)';
+        setTimeout(() => {
+            mensajeEspecial.style.opacity = 1;
+            mensajeEspecial.style.transform = 'scale(1)';
+        }, 100);
+    }
+</script>
+
+
+<div id="contador"></div>
+<script>
+    const fechaConocimos = new Date('2023-09-'); // Cambia la fecha por el día que se conocieron
+    const hoy = new Date();
+    const dias = Math.floor((hoy - fechaConocimos) / (1000 * 60 * 60 * 24));
+    document.getElementById("contador").innerText = `Han pasado ${dias} días desde que te conocí.`;
+</script>
+
+
+
+
+</body>
+</html>
